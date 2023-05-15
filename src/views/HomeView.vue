@@ -1,18 +1,39 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <div class="common-layout">
+   <el-container>
+     <el-aside width="auto">
+         <Lm/>
+     </el-aside>
+     <el-container>
+       <el-header>
+           <Rm/>
+       </el-header>
+       <el-main>
+           <router-view/>
+       </el-main>
+     </el-container>
+   </el-container>
+ </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+<script setup>
+import Lm from "../components/LeftMenu.vue"
+import Rm from "../components/RightTop.vue"
 
-export default defineComponent({
-  name: 'HomeView',
-  components: {
-    HelloWorld,
-  },
-});
 </script>
+
+<style lang="scss">
+   .el-aside{
+       background-color: #545c64;
+   }
+   .el-header{
+       // background-color: gold;
+   }
+   .el-main{
+       background-color: gainsboro;
+   }
+
+   .el-aside,.el-container,.common-layout,#app,body,html{
+       height: 100%;
+   }
+</style>

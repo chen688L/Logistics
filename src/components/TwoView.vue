@@ -159,7 +159,7 @@ onMounted(()=>{
         font-size:0.25rem;
     }
     .two{
-        height: 6.5rem;
+        height: 4.5rem;
         
     }
 </style>

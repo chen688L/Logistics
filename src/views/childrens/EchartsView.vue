@@ -1,8 +1,30 @@
 <template>
   <div class="container">
     <div class="itemleft">
-     <div>
-     </div>
+      <Ip>
+
+        <template #main>
+          <One/>
+        </template>
+
+      </Ip>
+      <Ip>
+        <template #main>
+          <Two/>
+        </template>
+      </Ip>
+    </div>
+    <div class="itemright">
+      <Ip>
+        <template #main>
+          <Three/>
+        </template>
+      </Ip>
+      <Ip>
+        <template #main>
+          <Four/>
+        </template>
+      </Ip>
     </div>
   </div>
 </template>
